@@ -2,6 +2,8 @@ package com.luizalabs.entregas.model;
 
 import java.time.LocalDate;
 
+import com.luizalabs.entregas.dto.EntregaDto;
+
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,33 +36,13 @@ public class Entrega {
     @Embedded
     private Endereco enderecoDestino;
 
-
-    @Embeddable
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    @Builder
-    public static class Endereco {
-
-        @Column(nullable = false)
-        private String cep;
-
-        @Column(nullable = false)
-        private String cef;
-
-        @Column(nullable = false)
-        private String cidade;
-
-        @Column(nullable = false)
-        private String bairro;
-
-        @Column(nullable = false)
-        private String rua;
-
-        @Column(nullable = false)
-        private String numero;
-
-        private String complemento;
-
+    public Entrega(EntregaDto entregaDto) {
+        this.id = entregaDto.getId();
+        this.quantidadePacotes = entregaDto.getQuantidadePacotes();
+        this.dataLimiteEntrega = entregaDto.getDataLimiteEntrega();
+        this.nomeCliente = entregaDto.getNomeCliente();
+        this.cpfCliente = entregaDto.getCpfCliente();
+        this.enderecoDestino = entregaDto.getEnderecoDestino();
     }
+
 }

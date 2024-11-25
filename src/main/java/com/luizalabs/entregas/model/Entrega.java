@@ -30,7 +30,7 @@ public class Entrega {
     @Column(nullable = false)
     private String nomeCliente;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String cpfCliente;
 
     @Embedded
@@ -44,5 +44,4 @@ public class Entrega {
         this.cpfCliente = entregaDto.getCpfCliente();
         this.enderecoDestino = entregaDto.getEnderecoDestino();
     }
-
 }

@@ -8,6 +8,4 @@ import com.luizalabs.entregas.model.Entrega;
 @Repository
 public interface EntregaRepository extends JpaRepository<Entrega, Long>{
 
-    boolean existsByCpfCliente(String cpfCliente);
-
 }

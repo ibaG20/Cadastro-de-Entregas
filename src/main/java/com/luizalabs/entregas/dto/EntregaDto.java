@@ -2,7 +2,6 @@ package com.luizalabs.entregas.dto;
 
 import java.time.LocalDate;
 
-import com.luizalabs.entregas.config.UniqueCpf;
 import com.luizalabs.entregas.model.Endereco;
 
 import jakarta.validation.constraints.*;
@@ -27,7 +26,6 @@ public class EntregaDto {
 
     @NotBlank(message = "O CPF do cliente é obrigatório")
     @Pattern(regexp = "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}", message = "O CPF deve estar no formato 000.000.000-00")
-    @UniqueCpf
     private String cpfCliente;
 
     @NotNull(message = "O endereço de destino é obrigatório")

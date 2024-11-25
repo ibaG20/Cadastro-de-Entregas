@@ -30,7 +30,7 @@ public class Entrega {
     @Column(nullable = false)
     private String nomeCliente;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String cpfCliente;
 
     @Embedded

@@ -37,7 +37,7 @@ mvn spring-boot:run
 ## Documentação com Swagger
 O projeto inclui integração com Swagger para fornecer uma interface interativa de documentação da API.
 Após iniciar o servidor, a documentação estará disponível no endpoint:
-http://localhost:8080/docs
+[Link para o Swagger](http://localhost:8080/docs)
 
 ## Testes Unitários 
 Os testes unitários foram desenvolvidos com JUnit e Mockito para validar o comportamento da aplicação.
@@ -53,7 +53,7 @@ A API implementa tratamentos de exceções utilizando @ControllerAdvice e classe
 - 500 INTERNAL SERVER ERROR: Um erro de tempo de execução ocorreu.
 
 ## Contato 🚀
-Responsável: Gabriella Marreto Rodrigues
-E-mail: marretogabriella@gmail.com
+Responsável: Gabriella Marreto Rodrigues   
+E-mail: marretogabriella@gmail.com   
 Linkedin: https://www.linkedin.com/in/gabriella-marreto-3bab1722b/
 
